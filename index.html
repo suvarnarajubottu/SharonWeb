@@ -1,0 +1,72 @@
+﻿<!DOCTYPE html>
+<html lang="en" ng-app="sfgmweb" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <meta name="author" content="Script Tutorials" />
+    <title>Sharon Full Gospel Ministries</title>
+    <meta name="description" content="Sharon Full Gospel Society-Website">
+
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" />
+
+    <!-- add styles -->
+    <link href="css/style.css" rel="stylesheet" type="text/css" />
+
+    <!-- add javascripts -->
+    <script src="js/jquery-2.0.3.min.js"></script>
+    <script src="js/angular.min.js"></script>
+    <script src="js/app.js"></script>
+    <script src="js/controllers.js"></script>
+</head>
+<body>
+    <header>
+        <div class="wrap">
+            <!-- logo -->
+            <a href="#!"><img class="logo" src="images/logo.png" /></a>
+            <!-- navigation menu -->
+            <nav>
+                <ul>
+                    <li><a id="aboutBtn" href="#!/about" ng-class="{activeSmall:part == 'about'}">About</a></li>
+                    <li><a id="workBtn" href="#!/" ng-class="{activeSmall:part == 'projects'}">Projects</a></li>
+                    <li><a id="FutureProjectsBtn" href="#!/FutureProjects" ng-class="{activeSmall:part == 'FutureProjects'}">Future</a></li>                    
+                    <li style="margin-right:0px"><a id="contactBtn" class="active" href="javascript: void(0)" ng-click="showForm()">Contact</a></li>
+                </ul>
+            </nav>  
+        </div>
+    </header>
+
+    <!-- contact us form -->
+    <div class="paddRow contactRow">
+        <div class="wrap">
+            <div class="head" style="font-size: 1.4em" >Contact us for enquiries and prayers</div>
+
+            <img class="close" src="images/close.png" ng-click="closeForm()" />
+            <form ng-submit="save()"  class="contactForm" name="form" ng-hide="loaded">
+                <div class="subHead" style="font-size: 0.65em" >
+                    Sharon Full Gospel Society,
+                    </br>
+
+                    Samithi Singaram,</br>
+                    <label>Manuguru,</label></br>
+                    <label>Khammam,</label></br>
+                    <label>Telangana(State),</label></br>
+                    <label>India.</label></br>
+                    <label>Call: +91 879 043 0976</label></br>
+                    <label>Email: anandambottu@gmail.com</label></br>
+                </div>
+</form>
+                <!-- contact us form response messages -->
+                <div ng-show="process" style="text-align:center">
+                    <img class="loader" src="images/loader.png" />
+                </div>
+                <div ng-show="success"><p>Your message has been sent, thank you.</p></div>
+            </div>
+            </div>
+
+            <!-- main content -->
+            <div style="position:relative">
+                <div style="width:100%" ng-view ng-animate="{enter: 'view-enter', leave: 'view-leave'}"></div>
+            </div>
+
+</body>
+</html>

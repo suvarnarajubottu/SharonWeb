@@ -1,0 +1,115 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!--
+This file is used by the publish/package process of your Web project. You can customize the behavior of this process
+by editing this MSBuild file. In order to learn more about this please visit http://go.microsoft.com/fwlink/?LinkID=208121. 
+-->
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <TimeStampOfAssociatedLegacyPublishXmlFile />
+    <_PublishTargetUrl>C:\publish\Ny mappe (2)</_PublishTargetUrl>
+  </PropertyGroup>
+  <ItemGroup>
+    <File Include="bin/WebApplication4.dll">
+      <publishTime>02/15/2017 19:42:08</publishTime>
+    </File>
+    <File Include="css/churchplanting.png">
+      <publishTime>11/29/2014 11:58:16</publishTime>
+    </File>
+    <File Include="css/style.css">
+      <publishTime>02/15/2017 20:17:52</publishTime>
+    </File>
+    <File Include="images/BibleCollege.PNG">
+      <publishTime>11/29/2014 14:58:49</publishTime>
+    </File>
+    <File Include="images/childorphan.png">
+      <publishTime>11/29/2014 09:30:14</publishTime>
+    </File>
+    <File Include="images/churchplant.png">
+      <publishTime>11/29/2014 11:59:40</publishTime>
+    </File>
+    <File Include="images/churchplanting.png">
+      <publishTime>01/01/0001 00:00:00</publishTime>
+    </File>
+    <File Include="images/close.png">
+      <publishTime>11/28/2014 18:54:42</publishTime>
+    </File>
+    <File Include="images/college.PNG">
+      <publishTime>11/29/2014 14:53:22</publishTime>
+    </File>
+    <File Include="images/comingsoon.PNG">
+      <publishTime>11/29/2014 20:29:20</publishTime>
+    </File>
+    <File Include="images/cru.PNG">
+      <publishTime>11/29/2014 14:33:58</publishTime>
+    </File>
+    <File Include="images/crusad.png">
+      <publishTime>11/29/2014 14:26:26</publishTime>
+    </File>
+    <File Include="images/kidsorphan.png">
+      <publishTime>11/29/2014 11:54:26</publishTime>
+    </File>
+    <File Include="images/loader.png">
+      <publishTime>11/28/2014 18:54:42</publishTime>
+    </File>
+    <File Include="images/logo.png">
+      <publishTime>11/28/2014 20:33:28</publishTime>
+    </File>
+    <File Include="images/nanna.PNG">
+      <publishTime>11/29/2014 14:05:22</publishTime>
+    </File>
+    <File Include="images/slum.png">
+      <publishTime>11/29/2014 12:08:26</publishTime>
+    </File>
+    <File Include="images/slumchild.png">
+      <publishTime>11/29/2014 12:08:27</publishTime>
+    </File>
+    <File Include="index.html">
+      <publishTime>02/15/2017 20:15:02</publishTime>
+    </File>
+    <File Include="js/angular.min.js">
+      <publishTime>11/28/2014 18:54:55</publishTime>
+    </File>
+    <File Include="js/app.js">
+      <publishTime>02/05/2017 17:45:59</publishTime>
+    </File>
+    <File Include="js/controllers.js">
+      <publishTime>02/05/2017 17:45:58</publishTime>
+    </File>
+    <File Include="js/jquery-2.0.3.min.js">
+      <publishTime>11/28/2014 18:54:55</publishTime>
+    </File>
+    <File Include="pages/about.html">
+      <publishTime>02/07/2017 14:49:25</publishTime>
+    </File>
+    <File Include="pages/footer.html">
+      <publishTime>02/07/2017 14:44:53</publishTime>
+    </File>
+    <File Include="pages/FutureProjects.html">
+      <publishTime>02/07/2017 10:16:23</publishTime>
+    </File>
+    <File Include="pages/index.html">
+      <publishTime>02/15/2017 20:10:33</publishTime>
+    </File>
+    <File Include="pages/project1.html">
+      <publishTime>12/01/2014 13:48:46</publishTime>
+    </File>
+    <File Include="pages/project2.html">
+      <publishTime>12/01/2014 13:48:46</publishTime>
+    </File>
+    <File Include="pages/project3.html">
+      <publishTime>02/05/2017 18:11:10</publishTime>
+    </File>
+    <File Include="pages/project4.html">
+      <publishTime>02/05/2017 15:14:53</publishTime>
+    </File>
+    <File Include="pages/project5.html">
+      <publishTime>02/05/2017 18:18:46</publishTime>
+    </File>
+    <File Include="pages/project6.html">
+      <publishTime>02/05/2017 18:18:46</publishTime>
+    </File>
+    <File Include="Web.config">
+      <publishTime>02/15/2017 09:13:42</publishTime>
+    </File>
+  </ItemGroup>
+</Project>

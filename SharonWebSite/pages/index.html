@@ -1,0 +1,205 @@
+<div style="width: 100%">
+
+    <a class="projectObj" href="#!/project/project1" style="background-color: #778899">
+
+        <div class="wrap about">
+            <section>
+                <div class="image flRight">
+                    <img src="images/college.png" class="abIcon">
+                </div>
+                <div class="txt flLeft">
+                    <h2 class="subHead">Bible College</h2>
+                    <p class="parawrap">
+                        Sharon Bible provides bible traning especially for tribal people.
+                        35 tribal students are getting trained every year. After training they go back to thier tribal villages and
+                        preach the Gospel to their own group. They not only learn Bible but also how to be a good human being and also moral values.
+                    </p>
+                    <P class="parawrap">Know more..</P>
+                </div>
+                <div style="clear: both"></div>
+            </section>
+        </div>
+    </a>
+    <a class="projectObj" href="#!/project/project2" style="background-color: #8fbc8f">
+
+        <div class="wrap about">
+            <!--<div class="name">Bible College</div>-->
+            <section>
+                <div class="image flRight">
+                    <img src="images/churchplant.png" class="abIcon">
+                </div>
+                <div class="txt flLeft">
+                    <h2 class="subHead">Church planting</h2>
+                    <p class="parawrap">
+                        The main objective of the church planting is to reach the Unreached with Gospel, save lives and turn them to Jesus.
+                        People in those areas have changed alot, they quit smoking, alcohol and many other bad habits.
+                        We send a pastor and his family to that areas who will work for them.
+                        Right now we serving with 18 churches, and many more need one
+                    </p>
+                    <P class="parawrap">Know more..</P>
+                </div>
+                <div style="clear: both"></div>
+            </section>
+        </div>
+    </a>
+
+
+    <a class="projectObj" href="#!/project/project3" style="background-color: #78c2d4">
+        <div class="wrap about">
+            <!--<div class="name">Bible College</div>-->
+            <section>
+                <div class="image flRight">
+                    <img src="images/slum.png" class="abIcon">
+                </div>
+                <div class="txt flLeft">
+                    <h2 class="subHead">Slum project</h2>
+                    <p class="parawrap">
+                        This project is to send the tribal children who can not attend school becauses of poverty.
+                        Children work in the forest along with their parents without attending school.
+                        Many children sit home with out attending school because they can not afford the school fee.
+                        They need to walk some miles to attend the school.
+                    </p>
+                    <P class="parawrap">Know more..</P>
+                </div>
+                <div style="clear: both"></div>
+            </section>
+        </div>
+    </a>
+    <a class="projectObj" href="#!/project/project4" style="background-color: #a9a9a9">
+        <div class="wrap about">
+            <!--<div class="name">Bible College</div>-->
+            <section>
+                <div class="image flRight">
+                    <img src="images/crusad.png" class="abIcon">
+                </div>
+                <div class="txt flLeft">
+                    <h2 class="subHead">Evangelism & Crusades</h2>
+                    <p class="parawrap">
+                        We conduct village evangelism where we select a village per week and reach the people of the village with the Good News.
+                        We distribute tracks, we sing on the roads, we preach in the open places, we talk one-to-one, by projecter we play Jesus movies and use all the possible ways to reach the Unreached.
+                        We conduct crusades at diffrent places through out the year.
+                    </p>
+                    <P class="parawrap">Know more..</P>
+                </div>
+                <div style="clear: both"></div>
+            </section>
+
+        </div>
+
+    </a>
+
+    <a class="projectObj" href="#!/project/project5" style="background-color: #5f9ea0">
+        <div class="wrap about">
+            <!--<div class="name">Bible College</div>-->
+            <section>
+                <div class="image flRight">
+                    <img src="images/Waterwells.PNG" class="abIcon">
+                </div>
+                <div class="txt flLeft">
+                    <h2 class="subHead">Water wells</h2>
+                    <p class="parawrap">
+                        Water wells project gives safe water to families who needs to walk miles to get some drinking water.
+                        There are many villages which lack minimum water facilities.
+                        We dig bore wells in villages where there is no safe water.
+                        This project is ondemand project
+                    </p>
+                    <P class="parawrap">Know more..</P>
+                </div>
+                <div style="clear: both"></div>
+            </section>
+        </div>
+    </a>
+
+    <a class="projectObj" href="#!/project/project6" style="background-color: #a9a9a9">
+        <div class="wrap about">
+            <!--<div class="name">Bible College</div>-->
+            <section>
+                <div class="image flRight">
+                    <img src="images/Sweing.png" class="abIcon">
+                </div>
+                <div class="txt flLeft">
+                    <h2 class="subHead">Sewing project</h2>
+                    <p class="parawrap">
+                        Sewing project makes widows and their children self sustainable.
+                        We give short term sewing training and a sewing machine for free of cost.
+                        They will acquire basic skills in sewing to make some money out of that.
+                        Tribal women and girls are most of them that attend this training.
+                    </p>
+                    <P class="parawrap">Know more..</P>
+                </div>
+                <div style="clear: both"></div>
+            </section>
+        </div>
+    </a>
+
+   
+    <script>
+        function initMap() {
+            var uluru = { lat: 17.925681, lng: 80.804041 };
+            var map = new google.maps.Map(document.getElementById('map'), {
+                zoom: 4,
+                center: uluru
+            });
+            var marker = new google.maps.Marker({
+                position: uluru,
+                map: map
+            });
+        }
+    </script>
+
+    <ng-include src="'pages/footer.html'"></ng-include>
+</div>
+
+<script>
+$('.projectObj').bind('click', function (e) {
+    e.preventDefault();
+
+    var me = this;
+    var width = $(me).width() / 1.5;
+    $(me).find('.wrap').width($(me).find('.wrap').width());
+
+    $(me).animate({
+        opacity: 0,
+        marginLeft: -width
+    }, 500);
+
+    var delayN = 150;
+    var delayP = 150;
+
+    var nextEl = $(me).nextAll('.projectObj');
+    var prevEl = $(me).prevAll('.projectObj');
+
+    nextEl.each(function (index, elem) {
+        setTimeout(function () {
+            
+            $(elem).find('.wrap').width($(elem).find('.wrap').width());
+
+            $(elem).animate({
+                opacity: 0,
+                marginLeft: -width
+              }, 500, function () {
+            });
+        }, delayN);
+        delayN += 100;
+    });
+
+    prevEl.each(function (index, elem) {
+        setTimeout(function () {
+            $(elem).find('.wrap').width($(elem).find('.wrap').width());
+
+            $(elem).animate({
+                opacity: 0,
+                marginLeft: -width
+              }, 500, function () {
+            });
+        }, delayP);
+        delayP += 100;
+    });
+
+    setTimeout(function () {
+        document.location = $(me).attr('href');
+    },1000)
+
+    return false;
+});
+</script>

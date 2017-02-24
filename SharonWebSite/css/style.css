@@ -99,7 +99,7 @@ input:focus,textarea:focus {
 
 /* header section */
 header {
-  height:110px;
+  height:auto;
 }
 header .wrap {
   height:100%;
@@ -167,7 +167,6 @@ footer .copyright {
   width:30%;
 }
 
-
 .paddRow {
   background-color:#dadada;
   color:#818181;
@@ -204,7 +203,7 @@ footer .copyright {
   margin:3% 0;
 }
 .about .subHead {
-  font-size:2em;
+  font-size:2.5em;
   font-weight:100;
   margin:0 0 3%;
 }
@@ -261,7 +260,7 @@ footer .copyright {
   
   text-align:left;
   font-size:xx-large;
-  color :dodgerblue;
+  color :black
 
 }
 
@@ -371,6 +370,7 @@ button {
 @media (max-width: 1200px) {
     body {
       font-size:90%;
+   
     }
     h1 {
       font-size:4.3em;
@@ -383,7 +383,7 @@ button {
     }
     header .logo {
       margin-top:12px;
-      width:200px;
+      width:20%;
     }
     header nav {
       margin-top:11px;
@@ -402,11 +402,21 @@ button {
     .paddRow .close {
       right:30px;
     }
+    .paddRow .subHead {
+        font-size: 1.5em;
+        font-weight: 100;
+        margin: 0 0 3%;
+    }
 }
 
 @media (max-width: 900px) {
     .contactForm {
       width:100%;
+    }
+      .paddRow .subHead {
+        font-size: 0.5em;
+        font-weight: 100;
+        margin: 0 0 3%;
     }
 }
 
@@ -419,11 +429,11 @@ button {
       font-size:4em;
     }
     header {
-      height:70px;
+      height:auto;
     }
     header .logo {
-      margin-top:20px;
-      width:70px;
+      margin-top:10px;
+      width:30%;
     }
     header nav {
       margin-top:8px;
@@ -454,6 +464,11 @@ button {
       top:60px;
       width:30px;
     }
+     .paddRow .subHead {
+        font-size: 0.5em;
+        font-weight: 100;
+        margin: 0 0 3%;
+    }
     .projectHead .picture {
       width:67%;
     }
@@ -477,12 +492,13 @@ button {
     body {
       font-size:70%;
       margin:0;
+           flex: auto;
     }
     header {
-      height:50px;
+      height:auto;
     }
     header .logo {
-      display:none;
+     display:none;
     }
     header nav {
       margin-top:3px;
@@ -529,4 +545,9 @@ button {
     .about .flLeft,.about .flRight,.input.email {
       float:none;
     }
+     .paddRow  .subHead {
+  font-size:0.35em;
+  font-weight:100;
+  margin:0 0 3%;
+}
 }

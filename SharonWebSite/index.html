@@ -100,14 +100,31 @@
                         display: block;
                         text-align: left;
                     }
+
+            div.responsive a {
+                float: right;
+                text-align: left;
+                display: inline-block;
+            }
         }
     </style>
     <header>
+        <!--<ul class="topnav" id="myTopnav">
+            <li><a href="#!"><img class="logo" src="images/logo.png"/></a></li>
+        </ul>-->
+        <div style="background: black">
+            <a href="#!"><img src="images/JustIndia.png" /></a>
+            <a class="jmj" href="#!"><img src="images/sfgmtext.png" /></a>
+        </div>
         <ul class="topnav" id="myTopnav">
-            <li><a id="aboutBtn" href="#!/about" ng-class="{activeSmall:part == 'about'}">About</a></li>
-            <li><a id="workBtn" href="#!/" ng-class="{activeSmall:part == 'projects'}">Projects</a></li>
-            <li><a id="FutureProjectsBtn" href="#!/FutureProjects" ng-class="{activeSmall:part == 'FutureProjects'}">Future</a></li>
-            <li style="margin-right: 0px"><a id="contactBtn" href="javascript: void(0)" ng-click="showForm()">Contact</a></li>
+
+            <!--<li class="icontext">
+                <a href="#!"><img src="images/SFGMText.png" /></a>
+            </li>-->
+            <li class="aa"><a id="aboutBtn" href="#!/about" ng-class="{activeSmall:part == 'about'}">About</a></li>
+            <li class="aa"><a id="workBtn" href="#!/" ng-class="{activeSmall:part == 'projects'}">Projects</a></li>
+            <li class="aa"><a id="FutureProjectsBtn" href="#!/FutureProjects" ng-class="{activeSmall:part == 'FutureProjects'}">Future</a></li>
+            <li class="aa" style="margin-right: 0px"><a id="contactBtn" href="javascript: void(0)" ng-click="showForm()">Contact</a></li>
             <li class="icon">
                 <a href="javascript:void(0);" style="font-size: 25px; mso-foreground: white" onclick="myFunction()">☰</a>
             </li>
@@ -133,7 +150,7 @@
 
             <img class="close" src="images/close.png" ng-click="closeForm()" />
             <form ng-submit="save()" class="contactForm" name="form" ng-hide="loaded">
-                <div class="subHead" style="font-size: 0.65em">
+                <div class="subHead">
                     Sharon Full Gospel Society,
                     </br>
 

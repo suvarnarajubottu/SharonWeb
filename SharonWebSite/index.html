@@ -17,32 +17,123 @@
     <script src="js/angular.min.js"></script>
     <script src="js/app.js"></script>
     <script src="js/controllers.js"></script>
+    <style>
+        body {
+            margin: 0;
+        }
+
+        ul.topnav {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            background-color: black;
+        }
+
+            ul.topnav li {
+                float: right;
+                margin-right: 2px;
+            }
+
+                ul.topnav li a {
+                    display: inline-block;
+                    color: #f2f2f2;
+                    text-align: center;
+                    padding: 14px 16px;
+                    text-decoration: none;
+                    transition: 0.3s;
+                    font-size: 17px;
+                }
+
+                    ul.topnav li a:hover {
+                        background-color: black;
+                    }
+
+                ul.topnav li.icon {
+                    display: none;
+                }
+
+        ul li a.active {
+            background-color: #c33c3a;
+            color: #fff;
+        }
+
+            ul li a.active:hover {
+                background-color: #d2413f;
+                color: #fff;
+            }
+
+        ul li a:hover, header ul li a.activeSmall {
+            color: #c33c3a;
+        }
+
+        @media screen and (max-width: 480px) {
+            ul.topnav li {
+                display: none;
+            }
+
+                ul.topnav li.icon {
+                    float: right;
+                    display: inline-block;
+                    height: auto;
+                    background: black;
+                }
+        }
+
+        @media screen and (max-width: 480px) {
+            ul.topnav.responsive {
+                position: relative;
+            }
+
+                ul.topnav.responsive li.icon {
+                    position: absolute;
+                    right: 0;
+                    top: 0;
+                }
+
+                ul.topnav.responsive li {
+                    float: none;
+                    display: inline;
+                }
+
+                    ul.topnav.responsive li a {
+                        display: block;
+                        text-align: left;
+                    }
+        }
+    </style>
+    <header>
+        <ul class="topnav" id="myTopnav">
+            <li><a id="aboutBtn" href="#!/about" ng-class="{activeSmall:part == 'about'}">About</a></li>
+            <li><a id="workBtn" href="#!/" ng-class="{activeSmall:part == 'projects'}">Projects</a></li>
+            <li><a id="FutureProjectsBtn" href="#!/FutureProjects" ng-class="{activeSmall:part == 'FutureProjects'}">Future</a></li>
+            <li style="margin-right: 0px"><a id="contactBtn" href="javascript: void(0)" ng-click="showForm()">Contact</a></li>
+            <li class="icon">
+                <a href="javascript:void(0);" style="font-size: 25px; mso-foreground: white" onclick="myFunction()">☰</a>
+            </li>
+        </ul>
+        <!--<nav>-->
+        <!--<ul>
+            <li><a id="aboutBtn" href="#!/about" ng-class="{activeSmall:part == 'about'}">About</a></li>
+            <li><a id="workBtn" href="#!/" ng-class="{activeSmall:part == 'projects'}">Projects</a></li>
+            <li><a id="FutureProjectsBtn" href="#!/FutureProjects" ng-class="{activeSmall:part == 'FutureProjects'}">Future</a></li>
+            <li style="margin-right: 0px"><a id="contactBtn" class="active" href="javascript: void(0)" ng-click="showForm()">Contact</a></li>
+        </ul>-->
+        <!--</nav>-->
+
+    </header>
 </head>
 <body>
-    <header>
-        <div class="wrap">
-            <!-- logo  -->
-            <a href="#!"><img class="logo" src="images/logo.png" /></a>
-            <!-- navigation menu -->
-            <nav>
-                <ul>
-                    <li><a id="aboutBtn" href="#!/about" ng-class="{activeSmall:part == 'about'}">About</a></li>
-                    <li><a id="workBtn" href="#!/" ng-class="{activeSmall:part == 'projects'}">Projects</a></li>
-                    <li><a id="FutureProjectsBtn" href="#!/FutureProjects" ng-class="{activeSmall:part == 'FutureProjects'}">Future</a></li>                    
-                    <li style="margin-right:0px"><a id="contactBtn" class="active" href="javascript: void(0)" ng-click="showForm()">Contact</a></li>
-                </ul>
-            </nav>  
-        </div>
-    </header>
+
 
     <!-- contact us form -->
     <div class="paddRow contactRow">
         <div class="wrap">
-            <div class="head" style="font-size: 1.4em" >Contact us for enquiries and prayers</div>
+            <div class="head" style="font-size: 1.4em">Contact us for enquiries and prayers</div>
 
             <img class="close" src="images/close.png" ng-click="closeForm()" />
-            <form ng-submit="save()"  class="contactForm" name="form" ng-hide="loaded">
-                <div class="subHead" style="font-size: 0.65em" >
+            <form ng-submit="save()" class="contactForm" name="form" ng-hide="loaded">
+                <div class="subHead" style="font-size: 0.65em">
                     Sharon Full Gospel Society,
                     </br>
 
@@ -54,19 +145,28 @@
                     <label>Call: +91 879 043 0976</label></br>
                     <label>Email: anandambottu@gmail.com</label></br>
                 </div>
-</form>
-                <!-- contact us form response messages -->
-                <div ng-show="process" style="text-align:center">
-                    <img class="loader" src="images/loader.png" />
-                </div>
-                <div ng-show="success"><p>Your message has been sent, thank you.</p></div>
+            </form>
+            <!-- contact us form response messages -->
+            <div ng-show="process" style="text-align:center">
+                <img class="loader" src="images/loader.png" />
             </div>
-            </div>
+            <div ng-show="success"><p>Your message has been sent, thank you.</p></div>
+        </div>
+    </div>
 
-            <!-- main content -->
-            <div style="position:relative">
-                <div style="width:100%" ng-view ng-animate="{enter: 'view-enter', leave: 'view-leave'}"></div>
-            </div>
-
+    <!-- main content -->
+    <div style="position:relative">
+        <div style="width:100%" ng-view ng-animate="{enter: 'view-enter', leave: 'view-leave'}"></div>
+    </div>
+    <script>
+function myFunction() {
+    var x = document.getElementById("myTopnav");
+    if (x.className === "topnav") {
+        x.className += " responsive";
+    } else {
+        x.className = "topnav";
+    }
+}
+    </script>
 </body>
 </html>
